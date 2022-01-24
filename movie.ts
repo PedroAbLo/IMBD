@@ -1,4 +1,4 @@
-import { Profesional } from "./professional";
+import { Professional } from "./professional";
 
 export class Movie{
     
@@ -22,7 +22,7 @@ export class Movie{
         this.title = title;
         this.releaseYear = releaseYear;
         this.nacionality = nacionality;
-        //this.actors
+        this.actors = [];
         this.director ="Un director";
         this.writer = "Un escritor";
         this.language ="Español";
@@ -36,7 +36,8 @@ export class Movie{
 
     public mostrarDatos():void{
         for(let datos in this){
-            console.log(datos);
+            //this.actors[datos].getDatos()
+            console.log(this[datos]);
         }
     }
 
