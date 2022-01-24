@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "file-system": "^2.2.2"
+    "@types/node": "^17.0.10",
+    "file-system": "^2.2.2",
+    "fs": "^0.0.1-security"
   }
 }

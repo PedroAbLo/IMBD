@@ -1,7 +1,7 @@
 import { Imdb } from "./imdb";
 import { Professional } from "./professional";
 import { Movie } from "./movie";
-import * as fs from 'file-system';
+import {writeFileSync, readFileSync} from 'fs';
 
 
 
@@ -27,8 +27,17 @@ nuevaMovie3.actors = actores3;
 
 libreriaPeliculas.peliculas = [nuevaMovie,nuevaMovie2,nuevaMovie3];
 
-libreriaPeliculas.getDatos();
-fs.writeFileSync("imdbBBDD.json",JSON.stringify(libreriaPeliculas));
+// libreriaPeliculas.getDatos();
+writeFileSync("imdbBBDD.json",JSON.stringify(libreriaPeliculas));
+// let variable = JSON.stringify(libreriaPeliculas);
+// let variable2 = JSON.parse(variable);
+// console.log(variable2.peliculas[0].actors);
+
+let nuevaLibreria:Imdb = JSON.parse(readFileSync("imdbBBDD.json").toString());
+console.log(nuevaLibreria);
+
+libreriaPeliculas.escribirEnFicheroJSON("pepito.json");
+
 
 
 
