@@ -9,6 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "file-system": "^2.2.2"
+    "bluebird": "^3.7.2",
+    "file-system": "^2.2.2",
+    "fs": "^0.0.1-security",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.10"
   }
 }
