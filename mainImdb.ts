@@ -1,6 +1,9 @@
 import { Imdb } from "./imdb";
 import { Professional } from "./professional";
 import { Movie } from "./movie";
+import * as fs from 'file-system';
+
+
 
 let libreriaPeliculas = new Imdb();
 
@@ -25,3 +28,7 @@ nuevaMovie3.actors = actores3;
 libreriaPeliculas.peliculas = [nuevaMovie,nuevaMovie2,nuevaMovie3];
 
 libreriaPeliculas.getDatos();
+fs.writeFileSync("imdbBBDD.json",JSON.stringify(libreriaPeliculas));
+
+
+
