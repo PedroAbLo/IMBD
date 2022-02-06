@@ -2,6 +2,7 @@ import { Imdb } from "./imdb";
 import { Professional } from "./professional";
 import { Movie } from "./movie";
 import { readFileSync } from 'file-system';
+//
 //import { readFile, writeFile } from "fs";
 import * as fs from 'file-system';
 //import Promise from "bluebird";
@@ -37,10 +38,23 @@ libreriaPeliculas.peliculas = [nuevaMovie,nuevaMovie2,nuevaMovie3];
 libreriaPeliculas.getDatos();
 fs.writeFileSync("imdbBBDD.json",JSON.stringify(libreriaPeliculas));
 
-let nuevaLibreriaPeliculas = new Imdb();
+let nuevaLibreriaPeliculas= new Imdb();
 let rawdata = readFileSync('imdbBBDD.json');
-nuevaLibreriaPeliculas = JSON.parse(rawdata);
+
+//nuevaLibreriaPeliculas = JSON.parse(rawdata);
+
+let prueba:Imdb = JSON.parse(rawdata);
+
+console.log("--------------------------------------------------");
+//console.log(typeof(prueba));
+//console.log(prueba);
+nuevaLibreriaPeliculas.peliculas = prueba.peliculas;
+
+console.log(nuevaLibreriaPeliculas);
+
+console.log("00000000000000000000000000");
 
 nuevaLibreriaPeliculas.getDatos();
+//nuevaLibreriaPeliculas.getDatos();
 
 
